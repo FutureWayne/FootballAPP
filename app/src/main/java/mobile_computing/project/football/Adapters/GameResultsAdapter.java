@@ -97,8 +97,8 @@ public class GameResultsAdapter extends BaseAdapter {
         holder.mTeamOneLogo.setImageUrl(match.getmTeamIconUrl(), mImageLoader);
         holder.mTeamTwoLogo.setImageUrl(match.getmTeamTwoIconUrl(), mImageLoader);
 
-        holder.mScoreOne.setText(String.valueOf(match.getmTeamScore()));
-        holder.mScoreTwo.setText(String.valueOf(match.getmTeamTwoScore()));
+        //holder.mScoreOne.setText(String.valueOf(match.getmTeamScore()));
+        //holder.mScoreTwo.setText(String.valueOf(match.getmTeamTwoScore()));
 
         // set click listener for each match
         holder.mListItem.setOnClickListener(new View.OnClickListener() {
@@ -128,8 +128,8 @@ public class GameResultsAdapter extends BaseAdapter {
         private TextView mTeamTwo;
         private NetworkImageView mTeamOneLogo;
         private NetworkImageView mTeamTwoLogo;
-        private TextView mScoreOne;
-        private TextView mScoreTwo;
+        //private TextView mScoreOne;
+        //private TextView mScoreTwo;
         private RelativeLayout mListItem;
 
         ViewHolder(View view){
@@ -138,8 +138,8 @@ public class GameResultsAdapter extends BaseAdapter {
             mTeamTwo = view.findViewById(R.id.team_2);
             mTeamOneLogo = view.findViewById(R.id.team1_logo);
             mTeamTwoLogo = view.findViewById(R.id.team2_logo);
-            mScoreOne = view.findViewById(R.id.score1);
-            mScoreTwo = view.findViewById(R.id.score2);
+            //mScoreOne = view.findViewById(R.id.score1);
+            //mScoreTwo = view.findViewById(R.id.score2);
         }
     }
 }

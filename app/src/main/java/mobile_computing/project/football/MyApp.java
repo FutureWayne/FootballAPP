@@ -5,9 +5,7 @@ import android.content.Context;
 
 import org.jetbrains.annotations.Contract;
 
-/**
- * Created by ajay3 on 1/18/2018.
- */
+
 
 public class MyApp extends Application {
 

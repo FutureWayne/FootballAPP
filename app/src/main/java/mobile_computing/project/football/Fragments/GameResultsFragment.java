@@ -64,7 +64,6 @@ public class GameResultsFragment extends Fragment {
         if (getArguments() != null) {
             mLeague = getArguments().getString(ARG_PARAM1);
             mSpieltag = getArguments().getInt(ARG_PARAM2);
-            mSpieltag = mSpieltag - 1;
         }
     }
 
@@ -80,7 +79,7 @@ public class GameResultsFragment extends Fragment {
         mLeagueName.setText(getString(R.string.spieltag) + " " + mSpieltag);
 
         // initialize the request queue
-        mQueue = Volley.newRequestQueue(getActivity());
+        mQueue = Volley.newRequestQueue(getContext());
 
         // Get the list for the match day
         String url = Constants.CURRENT_MATCHDAY_URL + "/2018/" + mSpieltag;
@@ -88,11 +87,12 @@ public class GameResultsFragment extends Fragment {
         StringRequest request = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-
                 // set games list adapter
                 try {
-                    adapter[0] = new GameResultsAdapter(getActivity(), getListFromJson(response));
-                    mGamesListView.setAdapter(adapter[0]);
+                    if(isAdded()) {
+                        adapter[0] = new GameResultsAdapter(getActivity(), getListFromJson(response));
+                        mGamesListView.setAdapter(adapter[0]);
+                    }
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -100,7 +100,6 @@ public class GameResultsFragment extends Fragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
             }
         });
 

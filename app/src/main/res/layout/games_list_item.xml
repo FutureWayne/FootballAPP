@@ -38,17 +38,6 @@
                 android:background="@color/common_google_signin_btn_text_dark_default" />
 
             <TextView
-                android:id="@+id/score1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="@dimen/dp_5"
-                android:layout_weight="0.25"
-                android:gravity="center"
-                android:text="@string/one"
-                android:textColor="@color/colorPrimaryDark" />
-
-            <TextView
                 android:id="@+id/colon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,18 +45,7 @@
                 android:layout_margin="@dimen/dp_5"
                 android:layout_weight="0.25"
                 android:gravity="center"
-                android:text="@string/colon"
-                android:textColor="@color/colorPrimaryDark" />
-
-            <TextView
-                android:id="@+id/score2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="@dimen/dp_5"
-                android:layout_weight="0.25"
-                android:gravity="center"
-                android:text="@string/one"
+                android:text="VS"
                 android:textColor="@color/colorPrimaryDark" />
 
             <com.android.volley.toolbox.NetworkImageView
